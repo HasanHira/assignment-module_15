@@ -17,7 +17,7 @@ Task 1: Request Validation
 
 Implement request validation for a registration form that contains the following fields: name, email, and password. Validate the following rules:
 
- 
+
 name: required, string, minimum length 2.
 
 
@@ -81,7 +81,7 @@ class RegistrationController extends Controller
 
 
 
- 
+
 ------------------------------------------ 2 -------------------------------------------------
 
 
@@ -196,7 +196,6 @@ Route::middleware(['auth'])->group(function () {
 ---------------------------------------------------------------------------------------------
 
 
-Please solve the laravel framwork problem:
 Task 5: Controller
 
 
