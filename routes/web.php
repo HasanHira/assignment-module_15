@@ -1,5 +1,6 @@
 <?php
 
+
 use App\Http\Controllers\ValidatController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,3 +17,15 @@ use Illuminate\Support\Facades\Route;
 
 // Task: 1
 Route::post('/register', [ValidatController::class, 'registerValidate']);
+
+
+// Task: 2
+Route::get('/home', function(){
+    return redirect('/dashboard', 302);
+});
+
+
+//Task:3 [This task completed in LogsRequestMiddleware with Kernel.php]
+
+
+// Task:4

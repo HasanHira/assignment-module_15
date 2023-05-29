@@ -149,7 +149,7 @@ protected $middleware = [
 
 ---------------------------------------------------------------------------------------------
 
-Task 4: Route Middleware
+Task 4: Route Middleware++
 
 
 Create a route group for authenticated users only. This group should include routes for /profile and /settings. Apply a middleware called AuthMiddleware to the route group to ensure only authenticated users can access these routes.
@@ -493,7 +493,6 @@ show.blade.php:
 ---------------------------------------------------------------------------------------------
 
 
-Please solve the laravel framwork problem:
 Task 8: Blade Template Engine
 
 
