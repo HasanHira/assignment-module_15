@@ -1,8 +1,11 @@
 <?php
 
-
-use App\Http\Controllers\ValidatController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ValidatController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +32,26 @@ Route::get('/home', function(){
 
 
 // Task:4
+Route::middleware(['AuthMiddleware'])->group( function () {
+    Route::get('/profile/{email}/{password}', [AuthController::class, 'AuthProfile']);
+    Route::get('/setting/{email}/{password}', [AuthController::class, 'AuthSetting']);
+});
+
+
+// Task:5
+Route::resource('products', ProductController::class);
+
+
+// Task:6
+Route::post('/contact', ContactController::class);
+
+
+// Task:7
+Route::resource('/products', PostController::class);
+
+
+// Task 8:
+Route::get( '/', function () {
+    return view( 'welcome' );
+} );
+
